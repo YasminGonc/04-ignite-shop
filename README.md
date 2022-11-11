@@ -3,6 +3,7 @@
 ## Ferramentas utilizadas
 
 - Next;
+- Stitches;
 
 ## Informações adicionais
 
