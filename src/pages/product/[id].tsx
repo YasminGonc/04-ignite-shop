@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
@@ -35,6 +35,15 @@ export default function Product({ product }: ProductProps) {
             </ProductDetails>
         </ProductContainer>
     )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    return {
+        paths: [
+            { params: {} }
+        ],
+        fallback: false,
+    }
 }
 
 export const getStaticProps: GetStaticProps<any, { id: string }> = async ({ params }) => {
